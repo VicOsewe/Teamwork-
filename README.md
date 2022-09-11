@@ -35,6 +35,11 @@ Here we have `business objects` or `entities` and should represent and encapsula
 ## Technologies
  - Python3.8
  - FasAPI (https://fastapi.tiangolo.com/)
+ - ORM Sqlalchemy
+ - Database Postgres
+ - Server Unicorn
+ - Pytest
+
 
 ## How to use it
 
