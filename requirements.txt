@@ -2,3 +2,5 @@ fastapi
 uvicorn
 flake8
 pytest
+sqlalchemy         
+psycopg2
