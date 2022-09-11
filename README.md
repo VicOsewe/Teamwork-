@@ -39,7 +39,7 @@ Here we have `business objects` or `entities` and should represent and encapsula
  - Database Postgres
  - Server Unicorn
  - Pytest
-
+- Linter Flake8
 
 ## How to use it
 
