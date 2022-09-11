@@ -1,9 +1,6 @@
 
 from fastapi import FastAPI
+from pkg.presentation.config import prepare_server
 
-app = FastAPI(title="TeamWork", version="1.0.0")
-
-
-@app.get("/")
-def hello_api():
-    return {"msg": "Hello API"}
+ 
+app = prepare_server()
