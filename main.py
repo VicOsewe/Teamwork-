@@ -1,5 +1,5 @@
 """Main.py"""
-from fastapi import  FastAPI
+from fastapi import FastAPI
 
 from pkg.application.core.environment import get_environment_variables
 from pkg.domain.dao.models.base_model import init
