@@ -1,0 +1,10 @@
+export POSTGRES_USER="postgres"
+export POSTGRES_PASSWORD="Shinnok1996"
+export POSTGRES_SERVER="localhost"
+export POSTGRES_PORT=5432
+export POSTGRES_DB="Teamwork"
+export PROJECT_NAME="jobboard" 
+export PROJECT_VERSION="version1" 
+export DEBUG_MODE=true
+export APP_NAME="teamwork"
+export API_VERSION="1.0.0"
