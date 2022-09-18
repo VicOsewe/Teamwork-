@@ -2,5 +2,7 @@ fastapi
 uvicorn
 flake8
 pytest
-sqlalchemy         
+sqlalchemy
 psycopg2
+pylint
+black

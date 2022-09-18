@@ -1,6 +1,21 @@
+"""Main.py"""
+from fastapi import  FastAPI
 
-from fastapi import FastAPI
-from pkg.presentation.config import prepare_server
+from pkg.application.core.environment import get_environment_variables
+from pkg.domain.dao.models.base_model import init
+from pkg.presentation.rest.user_routers import user_router
 
- 
-app = prepare_server()
+
+# Environment Configuration
+env = get_environment_variables()
+
+app = FastAPI(
+    title=env.APP_NAME,
+    version=env.API_VERSION,
+)
+
+# Add Routers
+app.include_router(user_router)
+
+# Initialise Data Model Attributes
+init()
