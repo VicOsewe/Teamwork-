@@ -1,21 +1,21 @@
 # Teamwork
 
-## About 
+## About
 - Teamwork is an internal social network for employees of an organization. The goal is to facilitate more interaction between colleagues and promote team bonding.
 - The services houses the backend of the application.
 
 
 ## Service Architecture
-The service implements `Clean Architecture` which helps to separate concerns by organizing code into several layers with a very explicit rule which enables us to create a testable and maintainable project.  [The Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html). 
+The service implements `Clean Architecture` which helps to separate concerns by organizing code into several layers with a very explicit rule which enables us to create a testable and maintainable project.  [The Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 
 
 ### The project will be divided into five layers:
 #### 1. Presentation
 This represents logic that consume the business logic from the `Usecase Layer`
-and renders to the view. Here you can choose to render the view in e.g `rest` 
+and renders to the view. Here you can choose to render the view in e.g `rest`
 
 #### 2. Usecases
-The code in this layer contains application specific business rules. 
+The code in this layer contains application specific business rules.
 This represents the pure business logic of the application.
 The rules of the application also shouldn't rely on the UI or the persistence frameworks being used.
 
@@ -39,16 +39,16 @@ Here we have `business objects` or `entities` and should represent and encapsula
  - Database Postgres
  - Server Unicorn
  - Pytest
-- Linter Flake8
+ - Pylint
 
 ## How to use it
 
-1. First clone the codefrom the repository 
+1. First clone the codefrom the repository
 ```bash
-    dev@dev:~$ git clone 
+    dev@dev:~$ git clone
 ```
 2. Create and activate a virtual environment:
- 
+
    ```sh
    $ python3.8 -m venv venv && source venv/bin/activate
    ```
@@ -67,8 +67,8 @@ Here we have `business objects` or `entities` and should represent and encapsula
    export POSTGRES_SERVER=""
    export POSTGRES_PORT=
    export POSTGRES_DB=""
-   export PROJECT_NAME="" 
-   export PROJECT_VERSION="" 
+   export PROJECT_NAME=""
+   export PROJECT_VERSION=""
    ```
 5. Run the server:
    ```sh

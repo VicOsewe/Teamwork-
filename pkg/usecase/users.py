@@ -10,6 +10,7 @@ from fastapi import Depends
 from pkg.domain.dto.schema.user import UserProfile
 from pkg.infrastructure.database.postgres.user import UserRepository
 from pkg.domain.dao.models.user import User
+from pkg.application.core.hashing import Hasher
 
 
 class UserUsecase:
@@ -26,12 +27,13 @@ class UserUsecase:
         """
         Handles the creation of a user's account
         """
+        hashed_password = Hasher.get_password_hash(user_body.password)
         return self.user_repository.create(
             User(
                 first_name=user_body.first_name,
                 last_name=user_body.last_name,
                 email=user_body.email,
-                password=user_body.password,
+                password=hashed_password,
                 gender=user_body.gender,
                 job_role=user_body.job_role,
                 department=user_body.department,
