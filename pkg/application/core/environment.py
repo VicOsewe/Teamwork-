@@ -5,7 +5,7 @@ import os
 from pydantic import BaseSettings
 
 
-@lru_cache
+@lru_cache()
 def get_env_filename():
     """retrieves the environment filename"""
     runtime_env = os.getenv("ENV")
@@ -23,7 +23,7 @@ class EnvironmentSettings(BaseSettings):  # pylint: disable=too-few-public-metho
     POSTGRES_SERVER: str
     POSTGRES_PORT: str
     POSTGRES_DB: str
-    DEBUG_MODE: bool
+    DEBUG_MODE: str
     API_VERSION: str
     APP_NAME: str
 
@@ -34,7 +34,7 @@ class EnvironmentSettings(BaseSettings):  # pylint: disable=too-few-public-metho
         env_file_encoding = "utf-8"
 
 
-@lru_cache
+@lru_cache()
 def get_environment_variables():
     """retrieves the values of environment variables"""
     return EnvironmentSettings()
