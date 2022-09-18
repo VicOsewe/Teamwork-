@@ -11,6 +11,7 @@ from pkg.domain.dao.models.user import User
 
 class UserRepository:
     """sets up users database layer"""
+
     database: Session
 
     def __init__(self, database: Session = Depends(get_db_connection)) -> None:
@@ -25,5 +26,5 @@ class UserRepository:
         return user
 
     def log_in_user(self) -> None:
-        """" log in use"""
+        """ " log in use"""
         return None
