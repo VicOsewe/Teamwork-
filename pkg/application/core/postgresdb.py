@@ -12,7 +12,8 @@ env = get_environment_variables()
 DATABASE_URL = f"postgresql://{env.POSTGRES_USER}:{env.POSTGRES_PASSWORD}@{env.POSTGRES_SERVER}:{env.POSTGRES_PORT}/{env.POSTGRES_DB}"  # pylint: disable=line-too-long
 
 # Create Database Engine
-Engine = create_engine(DATABASE_URL, echo=env.DEBUG_MODE, future=True)
+debug_mode = bool(env.DEBUG_MODE)
+Engine = create_engine(DATABASE_URL, echo=debug_mode, future=True)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=Engine)
 
